@@ -1,0 +1,81 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #ffe9b1;
+
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    background-color: #ffe298;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+a.navbar-brand img{
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+}
+
+.navbar-left{
+    align-items: center;
+    align-content: center;
+    display: flex;
+}
+
+.navbar-left .FairsPage a{
+    text-decoration: none;
+    color: #434242;
+}
+
+.navbar-left .HomePage a{
+    text-decoration: none;
+    color: #434242;
+}
+
+.navbar-left > *{
+    padding: 10px;
+}
+
+.navbar-left div{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #434242;
+}
+
+a.nav-link.text-dark{
+    margin: 10px;
+    padding: 10px;
+}
+
+ul.navbar-nav{
+    display: flex;
+    align-items: center;
+}
+
+.fairs-galery .test img{
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
