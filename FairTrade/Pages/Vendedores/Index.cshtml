@@ -1,0 +1,45 @@
+﻿@page
+@model FairTrade.Pages.Vendedores.IndexModel
+@{
+}
+
+
+<br />
+<h2>Lista de Vendedores</h2>
+<a class='btn btn-primary btn-sm' href='/Vendedores/Registar'>Novo Vendedor</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Palavra-passe</th>
+            <th>Rating</th>
+            <th>Modo de Pagamento</th>
+            <th>Criado por</th>
+            <th>Opção</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.listVendedores)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.username</td>
+                <td>@item.nome</td>
+                <td>@item.email</td>
+                <td>@item.password</td>
+                <td>@item.rating</td>
+                <td>@item.metodo_pagamento</td>
+                <td>@item.funcionario</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/Vendedores/Editar?id=@item.id"> Editar</a>
+                    <a class="btn btn-danger btn-sm" href="/Vendedores/Eliminar?id=@item.id"> Eliminar</a>
+                </td>
+                
+
+            </tr>
+        }
+    </tbody>
+</table>
