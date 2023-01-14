@@ -10,7 +10,6 @@
 <table class="table">
     <thead>
         <tr>
-            <th>ID</th>
             <th>Nome</th>
             <th>Descrição</th>
             <th>Região</th>
@@ -21,13 +20,13 @@
         @foreach (var item in Model.listFeiras)
         {
             <tr>
-                <td>@item.id</td>
                 <td>@item.nome</td>
                 <td>@item.descricao</td>
                 <td>@item.regiao</td>
                 <td>@item.categoria</td>
                 <td>
-                    <a class="btn btn-primary btn-sm" href="/Feiras/Editar?id=@item.id"> Editar</a>
+                    <a class="btn btn-primary btn-sm" href="/Feira/id=@item.id"> Aceder</a>
+                    <a class="btn btn-secondary btn-sm" href="/Feiras/Editar?id=@item.id"> Editar</a>
                     <a class="btn btn-danger btn-sm" href="/Feiras/Eliminar?id=@item.id"> Eliminar</a>
                 </td>
 

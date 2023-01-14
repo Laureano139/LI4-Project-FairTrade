@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data;
@@ -5,6 +6,7 @@ using System.Data.SqlClient;
 
 namespace FairTrade.Pages.Vendedores
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         public List<VendedorInfo> listVendedores = new List<VendedorInfo>();
