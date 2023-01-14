@@ -13,6 +13,7 @@
             <th>Username</th>
             <th>Nome</th>
             <th>Rating</th>
+            <th>ID da Feira</th>
             <th>Opção</th>
         </tr>
     </thead>
@@ -23,8 +24,9 @@
                 <td>@item.username</td>
                 <td>@item.nome</td>
                 <td>@item.rating</td>
+                <td>@item.id_feira</td>
                 <td>
-                    <a class="btn btn-primary btn-sm" href="/Vendedor/id=@item.id"> Aceder</a>
+                    <a class="btn btn-primary btn-sm" href="/Vendedores/Vendedor?id=@item.id"> Aceder</a>
                     <a class="btn btn-secondary btn-sm" href="/Vendedores/Editar?id=@item.id"> Editar</a>
                     <a class="btn btn-danger btn-sm" href="/Vendedores/Eliminar?id=@item.id"> Eliminar</a>
                 </td>

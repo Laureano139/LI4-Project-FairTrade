@@ -35,6 +35,7 @@ namespace FairTrade.Pages.Vendedores
                                 vendedorInfo.rating= reader.GetInt32(5);
                                 vendedorInfo.metodo_pagamento = reader.GetString(6);
                                 vendedorInfo.funcionario= reader.GetString(7);
+                                vendedorInfo.id_feira= reader.GetInt32(8);
 
                                 listVendedores.Add(vendedorInfo);
                             }
@@ -63,6 +64,6 @@ namespace FairTrade.Pages.Vendedores
         public int rating;
         public string metodo_pagamento;
         public string funcionario;
-
+        public int id_feira;
     }
 }

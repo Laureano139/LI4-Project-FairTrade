@@ -21,6 +21,8 @@ namespace FairTrade.Pages.Vendedores
             vendedorInfo.rating = Int32.Parse(Request.Form["rating"]);
             vendedorInfo.metodo_pagamento = Request.Form["modo_pagamento"];
             vendedorInfo.funcionario = Request.Form["funcionario"];
+            vendedorInfo.id_feira = Int32.Parse(Request.Form["id_feira"]);
+
 
             if (vendedorInfo.username.Length == 0 || vendedorInfo.nome.Length == 0 || vendedorInfo.email.Length == 0
                 || vendedorInfo.password.Length == 0 || vendedorInfo.metodo_pagamento.Length == 0 || vendedorInfo.funcionario.Length == 0)
@@ -35,8 +37,8 @@ namespace FairTrade.Pages.Vendedores
                 using (SqlConnection connection= new SqlConnection(connectionString)) { 
                     connection.Open();
                     String sql = "INSERT INTO Vendedores " +
-                                 "(username,nome,email,password,rating,modo_pagamento,funcionario_username) VALUES" +
-                                 "(@username,@nome,@email,@password,@rating,@modo_pagamento,@funcionario_username);";
+                                 "(username,nome,email,password,rating,modo_pagamento,funcionario_username,id_feira) VALUES" +
+                                 "(@username,@nome,@email,@password,@rating,@modo_pagamento,@funcionario_username,@id_feira);";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -47,6 +49,7 @@ namespace FairTrade.Pages.Vendedores
                         command.Parameters.AddWithValue("@rating", vendedorInfo.rating);
                         command.Parameters.AddWithValue("@modo_pagamento", vendedorInfo.metodo_pagamento);
                         command.Parameters.AddWithValue("@funcionario_username", vendedorInfo.funcionario);
+                        command.Parameters.AddWithValue("@id_feira", vendedorInfo.id_feira);
 
                         command.ExecuteNonQuery();
                     }
@@ -60,7 +63,7 @@ namespace FairTrade.Pages.Vendedores
             }
 
             vendedorInfo.username = ""; vendedorInfo.nome = ""; vendedorInfo.email = ""; vendedorInfo.password = "";
-            vendedorInfo.rating = 0;  vendedorInfo.metodo_pagamento = ""; vendedorInfo.funcionario = "";
+            vendedorInfo.rating = 0;  vendedorInfo.metodo_pagamento = ""; vendedorInfo.funcionario = ""; vendedorInfo.id_feira = -1;
             sucesso = "Novo Vendedor adicionado com sucesso!";
             Response.Redirect("/Vendedores/Index");
         }
