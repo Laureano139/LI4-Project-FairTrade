@@ -11,7 +11,7 @@ namespace FairTrade.Pages.Vendedores
         public void OnGet()
         {
             try {
-                string connectionstring = "Data Source=.\\sqlexpress;Initial Catalog=BD;Integrated Security=True";
+                string connectionstring = "Data Source=.\\sqlexpress;Initial Catalog=BD;Integrated Security=True; Encrypt=False;";
 
                 using (SqlConnection connection = new SqlConnection(connectionstring))
                 {
