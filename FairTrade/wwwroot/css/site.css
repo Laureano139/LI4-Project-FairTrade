@@ -80,3 +80,9 @@ ul.navbar-nav{
     align-content: center;
     align-items: center;
 }
+
+.navbar-nav button.nav-link.btn.btn-link.text-dark{
+    padding: 10px;
+    margin: 5px;
+
+}
