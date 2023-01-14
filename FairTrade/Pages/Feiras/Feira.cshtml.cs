@@ -26,7 +26,7 @@ namespace FairTrade.Pages.Feiras
                         command.Parameters.AddWithValue("@id_feira", id);
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            if (reader.Read())
+                            while (reader.Read())
                             {
                                 VendedorInfo vendedorInfo = new VendedorInfo();
                                 vendedorInfo.id = "" + reader.GetInt32(0);
