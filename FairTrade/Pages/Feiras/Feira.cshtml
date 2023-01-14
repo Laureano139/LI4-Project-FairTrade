@@ -12,7 +12,7 @@
 }
 
 <br />
-<h2>Lista de Vendedores da feira</h2>
+@*<h2>Lista de Vendedores da feira</h2>
 <table class="table">
     <thead>
         <tr>
@@ -37,4 +37,16 @@
             </tr>
         }
     </tbody>
-</table>
+</table>*@
+<section class="products">
+@foreach (var item in Model.listVendedores){
+<div class="card">
+    <div class="Title">
+        @item.username
+    </div>
+    <div class="image">
+        <img src="https://www.theplayoffs.com.br/wp-content/uploads/2022/07/Zion-Williamson.jpg" />
+    </div>
+</div>
+}
+</section>
