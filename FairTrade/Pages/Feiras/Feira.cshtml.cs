@@ -16,7 +16,7 @@ namespace FairTrade.Pages.Feiras
 
             try
             {
-                String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=BD;Integrated Security=True; Encrypt=False";
+                String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=BD;Integrated Security=True;Encrypt=False";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
