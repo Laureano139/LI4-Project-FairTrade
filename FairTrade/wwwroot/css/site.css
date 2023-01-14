@@ -72,6 +72,7 @@ a.nav-link.text-dark{
 ul.navbar-nav{
     display: flex;
     align-items: center;
+    flex-direction: row;
 }
 
 .fairs-galery .test img{
