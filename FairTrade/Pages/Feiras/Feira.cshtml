@@ -11,6 +11,11 @@
     </div>
 }
 
+<br>
+<h2>@Model.feiraInfo.nome</h2>
+<br />
+
+
 <br />
 <section class="products">
 @foreach (var item in Model.listProdutos){
@@ -25,7 +30,7 @@
         @item.preco€
     </div>
 </div>
-<a href="#"><h6>Compra-me!</h6></a>
+<a href="/Produto?id=@item.id"><h6>Compra-me!</h6></a>
 }
 </section>
 
