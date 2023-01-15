@@ -17,17 +17,14 @@
 <br />
 
 <section class="products">
-    @foreach (var item in Model.listVendedores)
-    {
         <div class="card">
             <div class="Title">
-                @item.username
+                @Model.vendedorInfo.nome
             </div>
             <div class="image">
-                <img src="@item.foto" />
+                <img src="@Model.vendedorInfo.foto" />
             </div>
         </div>
-    }
 </section>
 
 <h2>Lista de Produtos</h2>

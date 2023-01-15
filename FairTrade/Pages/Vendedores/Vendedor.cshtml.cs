@@ -8,7 +8,7 @@ namespace FairTrade.Pages.Vendedores
     public class VendedorModel : PageModel
     {
         public List<ProdutoInfo> listProdutos = new List<ProdutoInfo>();
-        public List<VendedorInfo> listVendedores = new List<VendedorInfo>();
+        public VendedorInfo vendedorInfo = new VendedorInfo();
         public String erro = "";
         public String sucesso = "";
         public void OnGet()
@@ -29,7 +29,6 @@ namespace FairTrade.Pages.Vendedores
                         {
                             if (reader.Read())
                             {
-                                VendedorInfo vendedorInfo = new VendedorInfo();
                                 vendedorInfo.id = "" + reader.GetInt32(0);
                                 vendedorInfo.username = reader.GetString(1);
                                 vendedorInfo.nome = reader.GetString(2);
@@ -40,8 +39,6 @@ namespace FairTrade.Pages.Vendedores
                                 vendedorInfo.funcionario = reader.GetString(7);
                                 vendedorInfo.id_feira = reader.GetInt32(8);
                                 vendedorInfo.foto = reader.GetString(9);
-
-                                listVendedores.Add(vendedorInfo);
                             }
 
 
