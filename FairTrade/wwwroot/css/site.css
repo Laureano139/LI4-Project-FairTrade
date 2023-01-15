@@ -120,6 +120,7 @@ ul.navbar-nav{
         flex: 1 0 100%;
         scroll-snap-align: start;
         object-fit: cover;
+        position: relative;
     }
 
 .slider-nav {
@@ -235,3 +236,53 @@ ul.navbar-nav{
         padding: 2px;
         font-size: 10px;
     }
+
+.i1{
+    position: absolute;
+    text-align: center;
+    top: 230px;
+    left: 260px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.slider .img-1{
+    text-align: center;
+    
+}
+
+.slider-wrapper{
+    position: relative;
+}
+
+.i2 {
+    position: absolute;
+    text-align: center;
+    top: 230px;
+    left: 260px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.slider .img-2 {
+    text-align: center;
+}
+
+.i3 {
+    position: absolute;
+    text-align: center;
+    top: 230px;
+    left: 260px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.slider .img-3 {
+    text-align: center;
+}
