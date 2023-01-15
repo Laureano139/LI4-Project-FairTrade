@@ -15,32 +15,7 @@
 }
 
 <br />
-@*<h2>Lista de Vendedores da feira</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Username</th>
-            <th>Nome</th>
-            <th>Rating</th>
-            <th>Opção</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.listVendedores)
-        {
-            <tr>
-                <td>@item.username</td>
-                <td>@item.nome</td>
-                <td>@item.rating</td>
-                <td>
-                    <a class="btn btn-primary btn-sm" href="/Vendedores/Vendedor/@item.id"> Aceder</a>
-                </td>
 
-
-            </tr>
-        }
-    </tbody>
-</table>*@
 <section class="products">
     @foreach (var item in Model.listVendedores)
     {
@@ -54,3 +29,35 @@
         </div>
     }
 </section>
+
+<h2>Lista de Produtos</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Rating</th>
+            <th>Tipo</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listProdutos)
+        {
+            <tr>
+                <td>@item.nome</td>
+                <td>@item.descricao</td>
+                <td>@item.preco</td>
+                <td>@item.rating</td>
+                <td>@item.tipo</td>
+                <td>@item.stock</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/Vendedores/Vendedor/@item.id"> Aceder</a>
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
