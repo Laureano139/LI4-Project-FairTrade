@@ -16,16 +16,39 @@
 
 <br />
 
-<section class="products">
-        <div class="card">
-            <div class="Title">
-                @Model.vendedorInfo.nome
+
+
+
+<div class="hero-sec">
+
+
+    <div class="products">
+            <div class="card">
+                <div class="Title">
+                    @Model.vendedorInfo.nome
+                </div>
+                <div class="image">
+                    <img src="@Model.vendedorInfo.foto" />
+                </div>
             </div>
-            <div class="image">
-                <img src="@Model.vendedorInfo.foto" />
-            </div>
+    </div>
+
+    <div class="vendedor-info">
+        <div class="all-info">
+            <div class="infos">Rating: @Model.vendedorInfo.rating</div>
+            <div class="infos">Email: @Model.vendedorInfo.email</div>
+            <div class="infos">Nome: @Model.vendedorInfo.nome</div>
+            <div class="infos">Feira Associada: <a href="/Feiras/Feira?id=@Model.vendedorInfo.id_feira">@Model.vendedorInfo.id_feira</a></div>
         </div>
-</section>
+    </div>
+
+
+</div>
+
+
+
+
+
 
 <h2>Lista de Produtos</h2>
 <table class="table">

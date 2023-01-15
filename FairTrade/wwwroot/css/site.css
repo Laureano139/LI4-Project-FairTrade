@@ -181,3 +181,27 @@ ul.navbar-nav{
     flex-direction: row;
     padding: 1em;
 }
+
+.hero-sec{
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+}
+
+.all-info{
+    padding: 1.5em;
+}
+
+.all-info .infos{
+    padding: 1em;
+    margin: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: solid;
+    border-color: #434242;
+}
+
+    .all-info .infos a{
+        text-decoration: none;
+        color: #434242;
+    }
