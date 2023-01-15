@@ -38,6 +38,7 @@ namespace FairTrade.Pages.Feiras
                                 vendedorInfo.metodo_pagamento = reader.GetString(6);
                                 vendedorInfo.funcionario = reader.GetString(7);
                                 vendedorInfo.id_feira = reader.GetInt32(8);
+                                vendedorInfo.foto = reader.GetString(9);
 
                                 listVendedores.Add(vendedorInfo);
                             }
