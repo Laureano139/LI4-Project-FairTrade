@@ -89,6 +89,7 @@ namespace FairTrade.Pages.Vendedores
                                 produtoInfo.numprodstock = reader.GetInt32(7);
                                 produtoInfo.id_vendedor = reader.GetInt32(8);
                                 produtoInfo.id_feira = reader.GetInt32(9);
+                                produtoInfo.foto = reader.GetString(10);
 
                                 listProdutos.Add(produtoInfo);
                             }
@@ -127,7 +128,7 @@ namespace FairTrade.Pages.Vendedores
             public int numprodstock;
             public int id_vendedor;
             public int id_feira;
-
+            public string foto;
         }
 
 

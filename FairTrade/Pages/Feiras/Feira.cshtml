@@ -12,41 +12,19 @@
 }
 
 <br />
-@*<h2>Lista de Vendedores da feira</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Username</th>
-            <th>Nome</th>
-            <th>Rating</th>
-            <th>Opção</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.listVendedores)
-        {
-            <tr>
-                <td>@item.username</td>
-                <td>@item.nome</td>
-                <td>@item.rating</td>
-                <td>
-                    <a class="btn btn-primary btn-sm" href="/Vendedores/Vendedor/@item.id"> Aceder</a>
-                </td>
-
-
-            </tr>
-        }
-    </tbody>
-</table>*@
 <section class="products">
-@foreach (var item in Model.listVendedores){
+@foreach (var item in Model.listProdutos){
 <div class="card">
     <div class="Title">
-        @item.username
+        @item.nome
+    </div>
+    <div class="card-subtitle" href="/Vendedores/Vendedor?id=@item.id">
+        @item.preco
     </div>
     <div class="image">
         <img src="@item.foto" />
     </div>
+    
 </div>
 }
 </section>
